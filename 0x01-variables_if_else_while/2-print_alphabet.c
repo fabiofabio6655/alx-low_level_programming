@@ -3,35 +3,19 @@
 /**
  * main - entry point
  *
- * Description: Write a program that prints
- *  all possible different combinations of two digits.
+ * Description:Write a program that prints the alphabet in lowercase.
  *
- *  Return: 0 (Success)
+ * Return: 0 (Success)
  */
 
 int main(void)
 {
-	int digit1 = 0, digit2;
+	char ch = 'a';
 
-	while (digit1 <= 9)
+	while (ch <= 'z') /* for betty*/
 	{
-		digit2 = 0;
-		while (digit2 <= 9)
-		{
-			if (digit1 != digit2 && digit1 < digit2)
-			{
-				putchar(digit1 + 48);
-				putchar(digit2 + 48);
-
-				if (digit1 + digit2 != 17)
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
-			digit2++;
-		}
-		digit1++;
+		putchar(ch);
+		ch++;
 	}
 	putchar('\n');
 
